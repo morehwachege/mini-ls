@@ -33,7 +33,11 @@ fn main() {
         let name = unsafe {
             CStr::from_ptr((*entry).d_name.as_ptr())
         };
-        println!("{}", name.to_string_lossy());
+        let name = name.to_string_lossy();
+        if name == "." || name == ".." {
+            continue;
+        }
+        println!("{}", name);
     }
     unsafe {
         libc::closedir(dir);
