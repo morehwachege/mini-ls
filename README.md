@@ -11,12 +11,12 @@ The clone supports basic listing functionality and selected options commonly use
 ## ✨ Features
 
 - [x] List files and directories
-- [] Support for hidden files (`-a`)
-- [] Long listing format (`-l`)
-- [] Recursive listing (`-R`)
-- [] Sort by name (default)
-- [] Handles files and directories as arguments
-- [] Proper error handling for invalid paths and permissions
+- [ ] Support for hidden files (`-a`)
+- [ ] Long listing format (`-l`)
+- [ ] Recursive listing (`-R`)
+- [ ] Sort by name (default)
+- [ ] Handles files and directories as arguments
+- [ ] Proper error handling for invalid paths and permissions
 
 > Feature support may vary depending on implementation progress.
 
