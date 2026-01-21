@@ -3,6 +3,7 @@ use std::ffi::{CString, CStr};
 
 fn main() {
     let path = env::args().nth(1).unwrap_or_else(|| ".".to_string());
+    let args: Vec<String> = env::args().skip(1).collect();
     let c_path = CString::new(path).expect("CString conversion failed");
 
     let fd = unsafe {
