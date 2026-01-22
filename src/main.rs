@@ -53,6 +53,7 @@ fn list_dir(path: &str, flags: &Flags) {
         unsafe { libc::close(fd) };
         return;
     }
+    println!("{}", path);
 
     loop {
         let entry = unsafe { libc::readdir(dir) };
@@ -68,9 +69,10 @@ fn list_dir(path: &str, flags: &Flags) {
         if !flags.all && (name == "." || name == "..") {
             continue;
         }
-
+        
         println!("{}", name);
     }
+    println!("\n");
 
     unsafe {
         libc::closedir(dir);
